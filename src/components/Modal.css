@@ -1,0 +1,131 @@
+.my-modal {
+  width: 40vw;
+  max-width: 40vw;
+}
+
+.grass {
+  color: rgb(86, 108, 32);
+  background-image: url(../images/grass.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.fire {
+  color: rgb(182, 76, 2);
+  background-image: url(../images/fire.png);
+
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.water {
+  color: rgb(48, 110, 150);
+  background-image: url(../images/water.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.poison {
+  color: rgb(99, 48, 113);
+  background-image: url(../images/poison.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.bug {
+  color: rgb(91, 127, 50);
+  background-image: url(../images/bug.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.fairy {
+  color: rgb(92, 3, 65);
+  background-image: url(../images/fairy.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.steel {
+  color: rgb(64, 87, 88);
+  background-image: url(../images/steel.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.ground {
+  color: rgb(123, 107, 5);
+  background-image: url(../images/ground.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.ice {
+  color: rgb(21, 119, 149);
+  background-image: url(../images/ice.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.electric {
+  color: rgb(126, 111, 11);
+  background-image: url(../images/electric.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.normal {
+  color: rgb(72, 78, 81);
+  background-image: url(../images/normal.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.flying {
+  color: rgb(63, 68, 71);
+  background-image: url(../images/flying.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.dark {
+  color: rgb(84, 91, 95);
+  background-image: url(../images/dark.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.ghost {
+  color: rgb(94, 74, 126);
+  background-image: url(../images/ghost.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.psychic {
+  color: rgb(139, 11, 86);
+  background-image: url(../images/psychic.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.fighting {
+  color: rgb(170, 82, 28);
+  background-image: url(../images/fight.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.dragon {
+  color: rgb(80, 0, 230);
+  background-image: url(../images/dragon.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.rock {
+  color: rgb(130, 112, 26);
+  background-image: url(../images/rock.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
