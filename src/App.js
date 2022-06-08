@@ -28,10 +28,13 @@ const App = () => {
             </Navbar.Brand>
 
             <Nav className="me-auto">
-              <Nav.Link className="nav-item px-3" href="/">
+              <Nav.Link className="nav-item px-3" href="/pokedex">
                 Home
               </Nav.Link>
-              <Nav.Link className="nav-item px-3" href="/SecondGeneration">
+              <Nav.Link
+                className="nav-item px-3"
+                href="/pokedex/SecondGeneration"
+              >
                 2nd Gen
               </Nav.Link>
               <Nav.Link className="nav-item px-3" href="/ThirdGeneration">
