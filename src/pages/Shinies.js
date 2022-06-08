@@ -31,7 +31,6 @@ const Shinies = () => {
   return (
     <div>
       <Container className=" m-auto px-auto pt-3 pb-3 border bg-light ">
-        <h1 className="text-center">Shinies</h1>
         {isLoaded ? (
           <h1 className="text-center">Loading 898 Shinies from the Pokedex</h1>
         ) : (

@@ -32,7 +32,7 @@ const SeventhGeneration = () => {
     <div>
       <Container className=" m-auto px-auto pt-3 pb-3 border bg-light ">
         {isLoaded ? (
-          <h1 className="text-center">Loading Pokedex</h1>
+          <h1 className="text-center">Loading Generation-7 Pokedex</h1>
         ) : (
           <Row>
             {pokemon.map((p) => (

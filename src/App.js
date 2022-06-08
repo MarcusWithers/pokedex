@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./styles/styles.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
@@ -35,7 +36,9 @@ const App = () => {
                 </Link>
               </Nav.Link>
               <Nav.Link className="nav-item px-3">
-                <Link to="/pokedex/SecondGeneration">2nd Gen</Link>
+                <Link className="nav-item" to="/pokedex/SecondGeneration">
+                  2nd Gen
+                </Link>
               </Nav.Link>
               <Nav.Link className="nav-item px-3">
                 <Link className="nav-item" to="/pokedex/ThirdGeneration">

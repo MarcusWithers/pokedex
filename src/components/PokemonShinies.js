@@ -21,19 +21,21 @@ const PokemonShinies = ({ pokemon }) => {
       >
         <Card.Img
           variant="top"
-          style={{ width: "8rem" }}
+          style={{ width: "9rem" }}
           src={pokemon.sprites.front_shiny}
         />
-        <Card.Title>{pokemon.name}</Card.Title>
-        <Card.Body className={`$pokemon.types[0].type.name rounded text-white`}>
-          <Button
-            //onClick={buttonHandler}
-            onClick={handleShow}
-            className="text-wrap"
-            stlye="primary "
-          >
+        <Card.Title>
+          <strong>
+            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+          </strong>
+        </Card.Title>
+        <Card.Body
+          className={`$pokemon.types[0].type.name $pokemon.types[1].type.name rounded text-white`}
+        >
+          <Button onClick={handleShow} className="text-wrap" stlye="primary ">
             Stats
           </Button>
+          <br />
           <Modal
             show={show}
             onHide={handleClose}
@@ -43,25 +45,62 @@ const PokemonShinies = ({ pokemon }) => {
             dialogClassName="my-modal"
           >
             <Modal.Header closeButton>
-              <Modal.Title>Stats</Modal.Title>
+              <Modal.Title className="w-100 text-center">
+                {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+              </Modal.Title>
             </Modal.Header>
+
             <Modal.Body>
-              <p>Type: {pokemon.types[0].type.name}</p>
-              <p>Height: {pokemon.height}</p>
-              <p>Weight: {pokemon.weight}</p>
-              <p>HP: {pokemon.stats[0].base_stat}</p>
-              <p>Attack: {pokemon.stats[1].base_stat}</p>
-              <p>Defense: {pokemon.stats[2].base_stat}</p>
-              <p>Special-Attack: {pokemon.stats[3].base_stat}</p>
-              <p>Special-Defense: {pokemon.stats[4].base_stat}</p>
-              <p>Speed: {pokemon.stats[5].base_stat}</p>
+              <div className="row">
+                <p className="col-md-4 ms-auto">
+                  <b>Combat Stats</b>
+                </p>
+                <p className="col-md-4 ms-auto ">
+                  <b>Life Stats</b>
+                </p>
+              </div>
+              <div className="row">
+                <p className={`$pokemon.types[0].type.name col-md-4 ms-auto`}>
+                  <em className={`$pokemon.types[0].type.name`}>
+                    Type:{" "}
+                    {pokemon.types[0].type.name.charAt(0).toUpperCase() +
+                      pokemon.types[0].type.name.slice(1)}
+                  </em>
+                </p>
+                <p className="col-md-4 ms-auto">Height: {pokemon.height}</p>
+              </div>
+              <div className="row">
+                <p className="col-md-4 ms-auto">
+                  HP: {pokemon.stats[0].base_stat}
+                </p>
+
+                <p className="col-md-4 ms-auto">Weight: {pokemon.weight}</p>
+              </div>
+              <div className="row">
+                <p className="col-md-10 ms-auto">
+                  Attack: {pokemon.stats[1].base_stat}
+                </p>
+
+                <p className="col-md-10 ms-auto">
+                  Defense: {pokemon.stats[2].base_stat}
+                </p>
+                <p className="col-md-10 ms-auto">
+                  Special-Attack: {pokemon.stats[3].base_stat}
+                </p>
+                <p className="col-md-10 ms-auto">
+                  Special-Defense: {pokemon.stats[4].base_stat}
+                </p>
+                <p className="col-md-10 ms-auto">
+                  Speed: {pokemon.stats[5].base_stat}
+                </p>
+                <p className="col-md-7 ms-auto">
+                  <img src={pokemon.sprites.front_default} />
+                </p>
+              </div>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
                 Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
               </Button>
             </Modal.Footer>
           </Modal>
