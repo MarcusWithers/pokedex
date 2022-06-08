@@ -23,14 +23,14 @@ const App = () => {
         <Navbar className="nav-item px-3" bg="dark" variant="dark">
           <Container>
             <Navbar.Brand>
-              <Link className="nav-item" to="/">
+              <Link className="nav-item" to="/pokedex">
                 Pokedex
               </Link>
               <img alt="" src="./images/Poke_Ball.png" />
             </Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link>
-                <Link className="nav-item" to="/">
+                <Link className="nav-item" to="/pokedex">
                   Home
                 </Link>
               </Nav.Link>
@@ -76,7 +76,7 @@ const App = () => {
           </Container>
         </Navbar>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/pokedex" element={<Home />} />
           <Route path="/pokedex/SecondGeneration" element={<SecondGen />} />
           <Route path="/pokedex/ThirdGeneration" element={<ThirdGen />} />
           <Route path="/pokedex/FourthGeneration" element={<FourthGen />} />
