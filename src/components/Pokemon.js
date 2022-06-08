@@ -3,22 +3,17 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./Modal.css";
-import HeartIcon from "../images/hearticon.png";
 
-//import Link from "react-router-dom";
-// <Link to={`/pokemon/${(pokemon, id)}`}>
-//Link
 const Pokemon = ({ pokemon }) => {
   const [show, setShow] = useState(false);
+  const [items, setItems] = useState([]);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const typeHandler = ({ pokemon }) => {
-    if (pokemon.types[0].type.name == "fire") {
-      console.log("fire");
-    }
-  };
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(items));
+  }, [items]);
 
   return (
     <>
@@ -28,7 +23,7 @@ const Pokemon = ({ pokemon }) => {
       >
         <Card.Img
           variant="top"
-          style={{ width: "8rem" }}
+          style={{ width: "9rem" }}
           src={pokemon.sprites.front_default}
         />
         <Card.Title>
