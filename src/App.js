@@ -22,7 +22,7 @@ const App = () => {
       <Router>
         <Navbar className="nav-item px-3" bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand href="/">
+            <Navbar.Brand href="/pokedex">
               Pokedex
               <img alt="" src="./images/Poke_Ball.png" />
             </Navbar.Brand>
@@ -59,7 +59,7 @@ const App = () => {
           </Container>
         </Navbar>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/pokedex" element={<Home />} />
           <Route path="/SecondGeneration" element={<SecondGen />} />
           <Route path="/ThirdGeneration" element={<ThirdGen />} />
           <Route path="/FourthGeneration" element={<FourthGen />} />
