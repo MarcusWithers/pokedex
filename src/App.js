@@ -23,38 +23,54 @@ const App = () => {
         <Navbar className="nav-item px-3" bg="dark" variant="dark">
           <Container>
             <Navbar.Brand>
-              <Link to="/">Pokedex</Link>
-
+              <Link className="nav-item" to="/">
+                Pokedex
+              </Link>
               <img alt="" src="./images/Poke_Ball.png" />
             </Navbar.Brand>
-
             <Nav className="me-auto">
-              <Nav.Link className="nav-item px-3" href="/">
-                Home
+              <Nav.Link>
+                <Link className="nav-item" to="/">
+                  Home
+                </Link>
               </Nav.Link>
               <Nav.Link className="nav-item px-3">
                 <Link to="/pokedex/SecondGeneration">2nd Gen</Link>
               </Nav.Link>
-              <Nav.Link className="nav-item px-3" href="/ThirdGeneration">
-                3rd Gen
+              <Nav.Link className="nav-item px-3">
+                <Link className="nav-item" to="/pokedex/ThirdGeneration">
+                  3rd Gen
+                </Link>
               </Nav.Link>
-              <Nav.Link className="nav-item px-3" href="/FourthGeneration">
-                4th Gen
+              <Nav.Link className="nav-item px-3">
+                <Link className="nav-item" to="/pokedex/FourthGeneration">
+                  4th Gen
+                </Link>
               </Nav.Link>
-              <Nav.Link className="nav-item px-3" href="/FifthGeneration">
-                5th Gen
+              <Nav.Link className="nav-item px-3">
+                <Link className="nav-item" to="/pokedex/FifthGeneration">
+                  5th Gen
+                </Link>
               </Nav.Link>
-              <Nav.Link className="nav-item px-3" href="/SixthGeneration">
-                6th Gen
+              <Nav.Link className="nav-item px-3">
+                <Link className="nav-item" to="/pokedex/SixthGeneration">
+                  6th Gen
+                </Link>
               </Nav.Link>
-              <Nav.Link className="nav-item px-3" href="/SeventhGeneration">
-                7th Gen
+              <Nav.Link className="nav-item px-3">
+                <Link className="nav-item" to="/pokedex/SeventhGeneration">
+                  7th Gen
+                </Link>
               </Nav.Link>
-              <Nav.Link className="nav-item px-3" href="/EighthGeneration">
-                8th Gen
+              <Nav.Link className="nav-item px-3">
+                <Link className="nav-item" to="/pokedex/EigthGeneration">
+                  8th Gen
+                </Link>
               </Nav.Link>
-              <Nav.Link className="nav-item px-3" href="/Shinies">
-                Shinies
+              <Nav.Link className="nav-item px-3">
+                <Link className="nav-item" to="/pokedex/Shinies">
+                  Shinies
+                </Link>
               </Nav.Link>
             </Nav>
           </Container>
@@ -62,13 +78,13 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pokedex/SecondGeneration" element={<SecondGen />} />
-          <Route path="/ThirdGeneration" element={<ThirdGen />} />
-          <Route path="/FourthGeneration" element={<FourthGen />} />
-          <Route path="/FifthGeneration" element={<FifthGen />} />
-          <Route path="/SixthGeneration" element={<SixthGen />} />
-          <Route path="/SeventhGeneration" element={<SeventhGen />} />
-          <Route path="/EighthGeneration" element={<EighthGen />} />
-          <Route path="/Shinies" element={<Shinies />} />
+          <Route path="/pokedex/ThirdGeneration" element={<ThirdGen />} />
+          <Route path="/pokedex/FourthGeneration" element={<FourthGen />} />
+          <Route path="/pokedex/FifthGeneration" element={<FifthGen />} />
+          <Route path="/pokedex/SixthGeneration" element={<SixthGen />} />
+          <Route path="/pokedex/SeventhGeneration" element={<SeventhGen />} />
+          <Route path="/pokedex/EighthGeneration" element={<EighthGen />} />
+          <Route path="/pokedex/Shinies" element={<Shinies />} />
           <Route path="*" element={<ErrorPage />} />
           {/*error page must be last */}
         </Routes>
