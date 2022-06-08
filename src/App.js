@@ -22,20 +22,18 @@ const App = () => {
       <Router>
         <Navbar className="nav-item px-3" bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand href="/pokedex">
-              Pokedex
+            <Navbar.Brand>
+              <Link to="/">Pokedex</Link>
+
               <img alt="" src="./images/Poke_Ball.png" />
             </Navbar.Brand>
 
             <Nav className="me-auto">
-              <Nav.Link className="nav-item px-3" href="/pokedex">
+              <Nav.Link className="nav-item px-3" href="/">
                 Home
               </Nav.Link>
-              <Nav.Link
-                className="nav-item px-3"
-                href="/pokedex/SecondGeneration"
-              >
-                2nd Gen
+              <Nav.Link className="nav-item px-3">
+                <Link to="/pokedex/SecondGeneration">2nd Gen</Link>
               </Nav.Link>
               <Nav.Link className="nav-item px-3" href="/ThirdGeneration">
                 3rd Gen
@@ -62,8 +60,8 @@ const App = () => {
           </Container>
         </Navbar>
         <Routes>
-          <Route path="/pokedex" element={<Home />} />
-          <Route path="/SecondGeneration" element={<SecondGen />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/pokedex/SecondGeneration" element={<SecondGen />} />
           <Route path="/ThirdGeneration" element={<ThirdGen />} />
           <Route path="/FourthGeneration" element={<FourthGen />} />
           <Route path="/FifthGeneration" element={<FifthGen />} />
