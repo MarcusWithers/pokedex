@@ -63,7 +63,7 @@ const App = () => {
                 </Link>
               </Nav.Link>
               <Nav.Link className="nav-item px-3">
-                <Link className="nav-item" to="/pokedex/EigthGeneration">
+                <Link className="nav-item" to="/pokedex/EighthGeneration">
                   8th Gen
                 </Link>
               </Nav.Link>
