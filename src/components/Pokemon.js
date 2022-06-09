@@ -11,14 +11,10 @@ const Pokemon = ({ pokemon }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  useEffect(() => {
-    localStorage.setItem("items", JSON.stringify(items));
-  }, [items]);
-
   return (
     <>
       <Card
-        className={`my-3 p-3 rounded text-center shadow mb-5 ${pokemon.types[0].type.name}`}
+        className={`my-3 p-3 rounded text-center shadow mb-5 ${pokemon.types[0].type.name} `}
         style={{ width: "11rem" }}
       >
         <Card.Img
@@ -77,6 +73,16 @@ const Pokemon = ({ pokemon }) => {
                 </p>
 
                 <p className="col-md-4 ms-auto">Weight: {pokemon.weight}</p>
+              </div>
+              <div className="row col-md-4 ms-auto">
+                {/*maps through pokemon types and displays them in card */}
+                {pokemon.types.map((types) => (
+                  <div key={types.type.name}>
+                    <div className={`${types.type.name}`}>
+                      {types.type.name}
+                    </div>
+                  </div>
+                ))}
               </div>
               <div className="row">
                 <p className="col-md-10 ms-auto">
